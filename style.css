@@ -1,0 +1,65 @@
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333333;
+    background-color: #f8f9fa;
+}
+
+
+/* 画面上部 70%: 地図 */
+#map {
+    width: 100vw;
+    height: 70vh;
+}
+
+/* 画面下部 30%: 店舗情報・メモ表示エリア */
+#note {
+    width: 100vw;
+    height: 30vh;
+    overflow-y: auto; /* 長いテキストの場合はスクロール可能に */
+    background-color: #ffffff;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.05);
+}
+
+#note h1 {
+    margin: 0;
+    padding: 12px;
+    font-size: 18px;
+    font-weight: bold !important;
+    color: #8B4513 !important; /* 茶色 */
+    text-align: center;
+    background-color: #f1f3f5;
+    border-bottom: 1px solid #e9ecef;
+}
+#note p {
+    margin: 0;
+    padding: 12px 16px;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+
+.red-circle-marker .red-dot {
+    width: 16px;
+    height: 16px;
+    background-color: #ff3b30; /* 赤色 */
+    border: 2px solid #ffffff;  /* 白い枠線 */
+    border-radius: 50%;         /* 完全な円形 */
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.leaflet-popup-content .shop-name {
+    font-weight: bold !important;
+    color: #8B4513 !important; /* 茶色 */
+    font-size: 15px;
+    display: inline-block;
+    margin-bottom: 4px;
+}
